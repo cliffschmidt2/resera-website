@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resera Research — Unlocking what AI is doing, and why</title>
+  <meta name="description" content="Resera Research is an independent AI interpretability lab studying how neural networks function on the inside: how they represent information, compute, attend to context, and arrive at their outputs.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Resera Research">
+  <meta property="og:description" content="An independent interpretability lab. Unlocking what AI is doing, and why.">
+  <meta property="og:type" content="website">
+  <style>
+    :root {
+      --ink: #16181d;
+      --muted: #5b6470;
+      --line: #e3e6ea;
+      --bg: #ffffff;
+      --bg-alt: #f7f8fa;
+      --accent: #1f4e79;
+      --maxw: 720px;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.65;
+      font-size: 18px;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+    header.site {
+      border-bottom: 1px solid var(--line);
+      position: sticky; top: 0; background: rgba(255,255,255,0.92);
+      backdrop-filter: saturate(180%) blur(8px);
+      z-index: 10;
+    }
+    header.site .wrap {
+      display: flex; align-items: baseline; justify-content: space-between;
+      padding-top: 16px; padding-bottom: 16px; gap: 16px; flex-wrap: wrap;
+    }
+    .brand { font-weight: 700; font-size: 19px; letter-spacing: -0.01em; color: var(--ink); }
+    nav a { color: var(--muted); font-size: 15px; margin-left: 20px; }
+    nav a:first-child { margin-left: 0; }
+
+    .hero { padding: 72px 0 48px; }
+    .hero h1 {
+      font-size: 40px; line-height: 1.12; letter-spacing: -0.02em;
+      margin: 0 0 16px; font-weight: 700;
+    }
+    .hero .tagline { font-size: 22px; color: var(--accent); margin: 0; font-weight: 500; }
+
+    section { padding: 40px 0; border-top: 1px solid var(--line); }
+    section h2 {
+      font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--muted); margin: 0 0 18px; font-weight: 600;
+    }
+    section p { margin: 0 0 18px; }
+    section p:last-child { margin-bottom: 0; }
+    .lead { font-size: 20px; }
+
+    .findings { list-style: none; margin: 0; padding: 0; }
+    .findings li { padding: 18px 0; border-bottom: 1px solid var(--line); }
+    .findings li:last-child { border-bottom: 0; padding-bottom: 0; }
+    .findings .title { font-weight: 650; color: var(--ink); font-size: 19px; }
+    .findings .desc { color: #3a414b; margin-top: 7px; }
+    .note { font-size: 15px; color: var(--muted); font-style: italic; margin-top: 22px; }
+
+    .name-meaning { background: var(--bg-alt); border-radius: 10px; padding: 20px 22px; font-size: 16px; color: var(--muted); }
+    .name-meaning strong { color: var(--ink); }
+
+    footer.site { border-top: 1px solid var(--line); padding: 32px 0 56px; color: var(--muted); font-size: 15px; }
+    footer.site a { color: var(--muted); text-decoration: underline; }
+
+    @media (max-width: 560px) {
+      .hero h1 { font-size: 32px; }
+      .hero .tagline { font-size: 19px; }
+      body { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <span class="brand">Resera&nbsp;Research</span>
+      <nav>
+        <a href="#mission">Mission</a>
+        <a href="#focus">Current focus</a>
+        <a href="#findings">Research</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="hero">
+        <h1>Unlocking what AI is doing,<br>and why.</h1>
+        <p class="tagline">An independent interpretability lab.</p>
+      </div>
+    </div>
+
+    <section id="mission">
+      <div class="wrap">
+        <h2>Mission</h2>
+        <p class="lead">Resera Research is an independent interpretability lab. We work to understand how neural networks function on the inside: the mechanisms by which they represent information, compute, attend to context, and arrive at their outputs.</p>
+        <p>Our aim is to contribute careful, controlled evidence to the open, shared understanding of how these systems work, alongside a growing research community: predictions written down before we run our experiments, and adversarial review of our own results. As AI systems grow more capable and more consequential, knowing how they do what they do, not just that they do it, becomes essential to trusting, steering, and improving them.</p>
+      </div>
+    </section>
+
+    <section id="focus">
+      <div class="wrap">
+        <h2>Current focus — 2026</h2>
+        <p>Our present work studies how neural networks pack information: <em>superposition</em> (a network representing more features than it has neurons by storing them as overlapping directions) and the related phenomenon of <em>polysemanticity</em> (one neuron taking part in several unrelated computations). Building on the foundational work in this area, we are running a series of pre-registered experiments, mostly in small models where we can check our answers against the true features, to better understand when networks pack features this way, what it costs them, what it buys them, and whether the same patterns hold in larger models. Our hope is to add careful, controlled evidence to the field's growing picture of how superposition works.</p>
+      </div>
+    </section>
+
+    <section id="findings">
+      <div class="wrap">
+        <h2>Research &amp; findings</h2>
+        <ul class="findings">
+          <li>
+            <div class="title">Incidental polysemanticity</div>
+            <div class="desc">Neural networks often store several unrelated features on the same neuron — &ldquo;polysemanticity.&rdquo; It is widely assumed this happens because a network has more features to represent than neurons to spare. We find that polysemanticity arises even when a network has spare capacity — more neurons than features — so feature-sharing is not merely a response to a capacity shortage but an incidental outcome of how networks initialize and train on sparse inputs. This sharpens what an interpretability method has to contend with: shared representations are the norm, not an artifact of tight budgets.</div>
+          </li>
+          <li>
+            <div class="title">The optimizer shapes how superposition forms</div>
+            <div class="desc">How much of a network&rsquo;s initial random structure survives training depends strongly on the optimizer. Plain (non-adaptive) gradient descent stays in a &ldquo;rich&rdquo; regime, reshaping its representations substantially; adaptive optimizers can instead stay &ldquo;lazy,&rdquo; retaining far more of their starting structure — a gap that grows with network width. We registered a prediction about the mechanism in advance, found the data reversed it, and report the corrected account. The practical upshot: a basic training choice changes how much superposition a network forms.</div>
+          </li>
+          <li>
+            <div class="title">The cost of sharing</div>
+            <div class="desc">Does packing features onto shared neurons actually hurt a network? We find it carries a real but narrowly-scoped cost: when two features that share a neuron are active at the same time, the pair is reconstructed worse, while matched features that do not share a neuron are not — an effect we isolate with balance controls so it is not an artifact. Notably, the broad input-noise fragility sometimes attributed to polysemanticity did not appear; the cost is specific to co-activation of shared features.</div>
+          </li>
+          <li>
+            <div class="title">The cost survives into superposition</div>
+            <div class="desc">Our cost result was first established in a simple &ldquo;one-neuron-per-feature&rdquo; setting, unlike the overlapping, distributed representations real models use. We find the co-activation cost survives into distributed superposition for the core case of two features colliding, across a wide range of packing densities. The honest shape: most of the measured cost is the geometry of overlapping directions, with a smaller genuinely-learned component on top that holds for pairs but fades when many features are co-activated in dense packing. This tells us the failure mode worth looking for in real models is pairwise interference between overlapping features.</div>
+          </li>
+        </ul>
+        <p class="note">We publish titles and findings rather than full papers while results are under review. Summaries are added as each result clears adversarial review.</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <h2>About &amp; contact</h2>
+        <p>Resera Research is an independent interpretability lab. We pre-register our predictions, run controlled experiments, and subject our own results to adversarial review before we report them.</p>
+        <div class="name-meaning">
+          <strong>Resera</strong> is the Latin imperative of <em>reserāre</em> — <em>unlock, unbar, unseal, reveal</em> — from <em>re-</em> (reverse) + <em>sera</em> (the bar that seals a door). For a lab whose work is to open the black box of AI and reveal what is inside, the name is the mission in one word.
+        </div>
+        <p style="margin-top:22px;">Contact: <a href="mailto:CONTACT_EMAIL_PLACEHOLDER">contact email coming soon</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      &copy; 2026 Resera Research · An independent interpretability lab
+    </div>
+  </footer>
+</body>
+</html>
