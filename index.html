@@ -54,7 +54,9 @@
     }
     .hero .tagline { font-size: 22px; color: var(--accent); margin: 0; font-weight: 500; }
 
-    section { padding: 40px 0; border-top: 1px solid var(--line); }
+    /* Offset anchor jumps so the section heading clears the sticky header
+       instead of scrolling underneath it. */
+    section { padding: 40px 0; border-top: 1px solid var(--line); scroll-margin-top: 72px; }
     section h2 {
       font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em;
       color: var(--muted); margin: 0 0 18px; font-weight: 600;
@@ -80,6 +82,9 @@
       .hero h1 { font-size: 32px; }
       .hero .tagline { font-size: 19px; }
       body { font-size: 17px; }
+      /* Header is taller here (nav wraps below the brand), so jumps need
+         more clearance. */
+      section { scroll-margin-top: 104px; }
     }
   </style>
 </head>
