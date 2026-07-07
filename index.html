@@ -128,13 +128,14 @@
       <div class="wrap">
         <h2>Research &amp; findings</h2>
         <ul class="findings">
+          <!-- FINDINGS:START (generated from findings.yaml — do not hand-edit) -->
           <li>
             <div class="title">Incidental polysemanticity</div>
-            <div class="desc">Neural networks often store several unrelated features on the same neuron — &ldquo;polysemanticity.&rdquo; It is widely assumed this happens because a network has more features to represent than neurons to spare. We find that polysemanticity arises even when a network has spare capacity — more neurons than features — so feature-sharing is not merely a response to a capacity shortage but an incidental outcome of how networks initialize and train on sparse inputs. This sharpens what an interpretability method has to contend with: shared representations are the norm, not an artifact of tight budgets.</div>
+            <div class="desc">Neural networks often store several unrelated features on the same neuron — “polysemanticity.” It is widely assumed this happens because a network has more features to represent than neurons to spare. We find that polysemanticity arises even when a network has spare capacity — more neurons than features — so feature-sharing is not merely a response to a capacity shortage but an incidental outcome of how networks initialize and train on sparse inputs. This sharpens what an interpretability method has to contend with: shared representations are the norm, not an artifact of tight budgets.</div>
           </li>
           <li>
             <div class="title">The optimizer shapes how superposition forms</div>
-            <div class="desc">How much of a network&rsquo;s initial random structure survives training depends strongly on the optimizer. Plain (non-adaptive) gradient descent stays in a &ldquo;rich&rdquo; regime, reshaping its representations substantially; adaptive optimizers can instead stay &ldquo;lazy,&rdquo; retaining far more of their starting structure — a gap that grows with network width. We registered a prediction about the mechanism in advance, found the data reversed it, and report the corrected account. The practical upshot: a basic training choice changes how much superposition a network forms.</div>
+            <div class="desc">How much of a network’s initial random structure survives training depends strongly on the optimizer. Plain (non-adaptive) gradient descent stays in a “rich” regime, reshaping its representations substantially; adaptive optimizers can instead stay “lazy,” retaining far more of their starting structure — a gap that grows with network width. We registered a prediction about the mechanism in advance, found the data reversed it, and report the corrected account. The practical upshot: a basic training choice changes how much superposition a network forms.</div>
           </li>
           <li>
             <div class="title">The cost of sharing</div>
@@ -142,8 +143,13 @@
           </li>
           <li>
             <div class="title">The cost survives into superposition</div>
-            <div class="desc">Our cost result was first established in a simple &ldquo;one-neuron-per-feature&rdquo; setting, unlike the overlapping, distributed representations real models use. We find the co-activation cost survives into distributed superposition for the core case of two features colliding, across a wide range of packing densities. The honest shape: most of the measured cost is the geometry of overlapping directions, with a smaller genuinely-learned component on top that holds for pairs but fades when many features are co-activated in dense packing. This tells us the failure mode worth looking for in real models is pairwise interference between overlapping features.</div>
+            <div class="desc">Our cost result was first established in a simple “one-neuron-per-feature” setting, unlike the overlapping, distributed representations real models use. We find the co-activation cost survives into distributed superposition for the core case of two features colliding, across a wide range of packing densities. The honest shape: most of the measured cost is the geometry of overlapping directions, with a smaller genuinely-learned component on top that holds for pairs but fades when many features are co-activated in dense packing. This tells us the failure mode worth looking for in real models is pairwise interference between overlapping features.</div>
           </li>
+          <li>
+            <div class="title">Computation survives into deeper superposition than storage</div>
+            <div class="desc">Superposition lets a network represent more features than it has neurons by storing them as overlapping directions. Earlier work established that a network <em>can</em> compute on features while they stay packed — carrying out a logical operation on their values without first unpacking them to one-feature-per-neuron. We asked a question no prior work had pinned down: where does that ability break down as you pack tighter? In a small ground-truth network trained on a task no straight-line rule can fake — parity, “is an odd number of the active features on?” — we located a real computation boundary, and it sits <em>above</em> the point where mere storage breaks down. In plain terms: a network can pack features more tightly and still correctly <em>compute</em> on them than it can pack them and still cleanly <em>store</em> them — and where computation breaks depends on how much interference is present, which the storage limit did not. Packing also beat the one-feature-per-neuron alternative wherever features outnumbered neurons, so computing in superposition is a genuine strategy, not just a way to save room. These are toy-model results, with controls ruling out that the network was secretly memorizing or unpacking; they locate where a <em>trained</em> network’s boundary sits — they do not claim that real language models compute this way.</div>
+          </li>
+          <!-- FINDINGS:END -->
         </ul>
         <p class="note">We publish titles and findings rather than full papers while results are under review. Summaries are added as each result clears adversarial review.</p>
       </div>
